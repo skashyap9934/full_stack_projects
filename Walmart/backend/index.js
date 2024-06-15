@@ -11,12 +11,12 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-app.use(express.json());
-app.use(cors());
-app.use("/user", userRouter);
-app.use("/products", productsRouter);
-app.use("/wishlist", wishlistsRouter);
-app.use("/bag", bagsRouter);
+// app.use(express.json());
+// app.use(cors());
+// app.use("/user", userRouter);
+// app.use("/products", productsRouter);
+// app.use("/wishlist", wishlistsRouter);
+// app.use("/bag", bagsRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to HomePage" });
