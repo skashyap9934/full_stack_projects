@@ -12,13 +12,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["https://full-stack-projects-g2vr.vercel.app/"],
-    methods: ["POST", "GET", "DELETE"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use("/user", userRouter);
 app.use("/products", productsRouter);
 app.use("/wishlist", wishlistsRouter);
