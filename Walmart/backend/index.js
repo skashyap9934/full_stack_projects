@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is UP & Running at PORT ${PORT}`);
-  connectToDatabase();
+  // connectToDatabase();
   console.log(`Connected to the database successfully`);
 });
