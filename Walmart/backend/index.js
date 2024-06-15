@@ -12,7 +12,13 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://clever-biscuit-7213f5.netlify.app/"],
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true,
+  })
+);
 app.use("/user", userRouter);
 app.use("/products", productsRouter);
 app.use("/wishlist", wishlistsRouter);
