@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://clever-biscuit-7213f5.netlify.app/"],
+    origin: ["https://full-stack-projects-g2vr.vercel.app/"],
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
