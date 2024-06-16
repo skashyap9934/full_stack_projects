@@ -13,10 +13,10 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-// app.use("/user", userRouter);
-// app.use("/products", productsRouter);
-// app.use("/wishlist", wishlistsRouter);
-// app.use("/bag", bagsRouter);
+app.use("/user", userRouter);
+app.use("/products", productsRouter);
+app.use("/wishlist", wishlistsRouter);
+app.use("/bag", bagsRouter);
 
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to HomePage" });
@@ -24,6 +24,6 @@ app.get("/", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is UP & Running at PORT ${PORT}`);
-  // connectToDatabase();
+  connectToDatabase();
   console.log(`Connected to the database successfully`);
 });
