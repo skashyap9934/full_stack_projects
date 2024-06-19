@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.Navbar {
+  font-family: "Poppins";
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+  padding: 7px;
+  background: linear-gradient(to right, #369ba9, #017455b7, #001e15);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.Navbar h3 {
+  font-family: "Poppins";
+  font-size: 1.75rem;
+}
+
+.Navbar a {
+  padding: 5px 11px;
+  font-weight: bold;
+  border-radius: 1px;
+}
+
+.Navbar a:hover {
+  color: yellow;
+}
+
+.Navbar > div:first-child {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar img {
+  width: 35px;
+  margin-right: 11px;
+  border-radius: 50%;
+}
+
+.PostNavBody {
+  min-height: 93.3vh;
+  position: relative;
+  background: url("./assets/pexels-tobiasbjorkli-1938351.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.Details {
+  color: white;
+  font-size: 1.75rem;
+  font-family: "Poppins";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.Name span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(255, 241, 214);
+}
+
+.Details p {
+  width: max-content;
+}
+
+.Tech span {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: yellow;
+  animation: typing 3s steps(35, end) infinite;
+  width: 0;
+  overflow: hidden;
+  border-right: 2px solid red;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 100%;
+  }
+  75% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+    padding-right: 1rem;
+  }
+}
+
+.PostNavBody img {
+  width: 21%;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translate(10%, -50%);
+  border-radius: 50%;
+  animation: updown 3s infinite;
+}
+
+@keyframes updown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 53%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.About {
+  padding: 25px;
+  font-family: "Poppins";
+}
+
+.Heading {
+  font-size: 25px;
+  border-bottom: 3px solid red;
+  width: max-content;
+  margin: auto;
+  margin-bottom: 21px;
+  color: red;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.About > div {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+
+.About > div > div:last-child {
+  width: 50%;
+  text-align: justify;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 11px 21px;
+  border-radius: 11px;
+}
+
+.About img {
+  width: 175px;
+  border-radius: 11px;
+  animation: updown 3s infinite;
+}
+
+.Mern {
+  width: max-content;
+}
+
+.Mern span {
+  animation: typing 3s steps(35, end) infinite;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid green;
+  color: red;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.Skills {
+  padding-block: 2rem;
+  font-family: "Poppins";
+  background: bisque;
+  margin-top: 1rem;
+}
+
+.SkillSec i {
+  font-size: 3.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.SkillSec ul {
+  list-style-type: none;
+  margin-top: 11px;
+}
+
+.Skills > div {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 3%;
+}
+
+.SkillSec {
+  text-align: center;
+  padding: 3%;
+  border: 2px solid red;
+  background: lightgoldenrodyellow;
+  border-radius: 50% 0 50% 0;
+}
+
+.SkillSec li {
+  margin-block-end: 5px;
+  text-align: left;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+
+.SkillSec:hover {
+  cursor: pointer;
+  background: beige;
+  border-radius: 0 50% 0 50%;
+}
+
+.SkillSec p {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.TechStack {
+  margin-top: 21px;
+}
+
+.Grid {
+  grid-template-columns: repeat(4, 1fr);
+  width: 65%;
+  margin: auto;
+  padding: 1%;
+  gap: 11px;
+}
+
+.Grid > div {
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Poppins";
+  padding: 35px;
+  border-radius: 40% 25%;
+  box-shadow: rgba(165, 207, 255, 0.4) 0px 0px 0px 2px,
+    rgba(149, 199, 255, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.Grid > div:hover {
+  border-radius: 25% 40%;
+  cursor: pointer;
+}
+
+.Grid img {
+  width: 5rem;
+  margin-bottom: 17px;
+  border-radius: 50%;
+}
+
+.Grid .NoRadius {
+  border-radius: 0;
+}
+
+.Projects {
+  margin-top: 2rem;
+  padding-block: 1rem;
+  background: whitesmoke;
+}
+
+.Projects > div {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 65%;
+  gap: 3%;
+}
+
+.Projects img {
+  width: 100%;
+}
+
+.IndPro {
+  padding: 35px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.IndPro p {
+  text-align: justify;
+  font-family: "Poppins";
+}
+
+.IndPro > p:nth-child(2) {
+  text-align: center;
+  margin-top: 11px;
+}
+
+.IndPro:hover {
+  scale: 1.01;
+  cursor: pointer;
+  background: white;
+}
+
+.Buttons {
+  margin: auto;
+  margin-top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Poppins";
+}
+
+.Experience {
+  margin-block: 3rem;
+  font-family: "Poppins";
+}
+
+.Experience div {
+  width: max-content;
+  padding: 2%;
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.05);
+  margin-left: 5%;
+  position: relative;
+}
+
+.Experience div:hover {
+  scale: 1.005;
+  cursor: pointer;
+  background: rgba(249, 244, 244,  0.74);
+}
+
+.JobDesc {
+  list-style-type: square;
+  margin-left: 35px;
+}
+
+.Description {
+  text-decoration: underline;
+}
+
+.CompanyLogo {
+  width: 111px;
+  position: absolute;
+  top: 11%;
+  right: 11%;
+}
+
+.Contact {
+  font-family: "Poppins";
+  background-color: beige;
+  padding-block: 21px;
+  padding-inline: 5%;
+}
+
+.Contact ul {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 75%;
+}
+
+.Contact li {
+  margin-block-end: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Contact a:hover {
+  color: red;
+}
+
+.ThanksNote {
+  background: linear-gradient(to right, red, blue, green, orange);
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-transform: capitalize;
+  padding-block: 0.5rem;
+}
+
+.ThanksNote p {
+  padding: 5px 1rem;
+  width: max-content;
+  margin: auto;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.Navbar a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.Navbar a.active {
+  background: whitesmoke;
+  color: black;
+}

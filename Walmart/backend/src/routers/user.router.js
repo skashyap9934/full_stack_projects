@@ -9,10 +9,12 @@ require("dotenv").config();
 const userRouter = Router();
 
 userRouter.post("/register", async (req, res) => {
-  const { email, password } = req.body;
-
   try {
-    const user = await UserModel.findOne({ email });
+    const { email, password } = req.body;
+    const user = await UserModel.findOne({ email: email });
+    console.log(user);
+
+    return res.json({ user });
 
     if (user)
       return res.json({
@@ -41,32 +43,33 @@ userRouter.post("/register", async (req, res) => {
 });
 
 userRouter.post("/login", async (req, res) => {
-  const { email, password } = req.body;
-
   try {
-    const user = await UserModel.findOne({ email });
+    const { email, password } = req.body;
 
     if (!password || !email)
       return res.json({ message: "Invalid Credentials. Please try again." });
 
+    const user = await UserModel.findOne({ email: email });
+
     if (!user) return res.json({ message: "Please register first." });
 
-    bcrypt.compare(password, user.password, async (err, result) => {
-      if (result) {
-        const access_token = jwt.sign(
-          {
-            _id: user._id,
-            email: user.email,
-          },
-          process.env.SECRET_CODE
-        );
-        return res.status(200).json({
-          message: "Logged in successfully",
-          access_token,
-          email: email,
-        });
-      } else return res.json({ message: "Invalid Credentials" });
-    });
+    return res.json({ email, password });
+    // bcrypt.compare(password, user.password, async (err, result) => {
+    //   if (result) {
+    //     const access_token = jwt.sign(
+    //       {
+    //         _id: user._id,
+    //         email: user.email,
+    //       },
+    //       process.env.SECRET_CODE
+    //     );
+    //     return res.status(200).json({
+    //       message: "Logged in successfully",
+    //       access_token,
+    //       email: email,
+    //     });
+    //   } else return res.json({ message: "Invalid Credentials" });
+    // });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
