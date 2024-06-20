@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const connectToDatabase = require("../config/database");
+const mongoose = require("mongoose");
 const url = require("url");
 
 const bagsRouter = Router();
@@ -10,13 +10,8 @@ bagsRouter.get("/", async (req, res) => {
 
   const { email } = query;
 
-  const client = await connectToDatabase();
-
-  const database = client.db("walmart");
-  const collection = database.collection("bags");
-
+  const collection = mongoose.connection.collection("bags");
   const bagsProducts = await collection.find({ email: email }).toArray();
-
   const totalCount = bagsProducts.length;
 
   let totalCost = 0;
@@ -29,25 +24,15 @@ bagsRouter.get("/", async (req, res) => {
 
 bagsRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
-
-  const client = await connectToDatabase();
-
-  const database = client.db("walmart");
-  const collection = database.collection("bags");
-
+  const collection = mongoose.connection.collection("bags");
   const product = await collection.findOne({ id: Number(id) });
   res.json({ message: product });
 });
 
-// Add a product to the bag
 bagsRouter.post("/add", async (req, res) => {
   try {
-    const client = await connectToDatabase();
-    const database = client.db("walmart");
-    const collection = database.collection("bags");
-
+    const collection = mongoose.connection.collection("bags");
     const product = await collection.insertOne(req.body);
-    
     res.json({ message: product });
   } catch (error) {
     return res.status(404).json({ message: error.message });
@@ -67,10 +52,7 @@ bagsRouter.delete("/delete", async (req, res) => {
 
   const { email } = query;
 
-  const client = await connectToDatabase();
-  const database = client.db("walmart");
-  const collection = database.collection("bags");
-
+  const collection = mongoose.connection.collection("bags");
   const bagProducts = await collection.deleteMany({ email: email });
 
   res.json({ message: "Products removed from bag." });

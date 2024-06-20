@@ -177,11 +177,12 @@
   font-size: 23px;
 }
 
-.Skills {
+.App .Skills {
   padding-block: 2rem;
   font-family: "Poppins";
   background: bisque;
   margin-top: 1rem;
+  color: black;
 }
 
 .SkillSec i {
@@ -267,10 +268,11 @@
   border-radius: 0;
 }
 
-.Projects {
+.App .Projects {
   margin-top: 2rem;
   padding-block: 1rem;
   background: whitesmoke;
+  color: black;
 }
 
 .Projects > div {
@@ -324,15 +326,16 @@
 .Experience div {
   width: max-content;
   padding: 2%;
-  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(109, 255, 138, 0.51);
   margin-left: 5%;
   position: relative;
+  border-radius: 3px 31px 3px 31px;
 }
 
 .Experience div:hover {
   scale: 1.005;
   cursor: pointer;
-  background: rgba(249, 244, 244,  0.74);
+  border-radius: 31px 3px 31px 3px;
 }
 
 .JobDesc {
@@ -351,11 +354,12 @@
   right: 11%;
 }
 
-.Contact {
+.App .Contact {
   font-family: "Poppins";
   background-color: beige;
   padding-block: 21px;
   padding-inline: 5%;
+  color: black;
 }
 
 .Contact ul {
@@ -407,4 +411,20 @@
 .Navbar a.active {
   background: whitesmoke;
   color: black;
+}
+
+.fa-moon {
+  border: 2px dashed white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa-moon:hover {
+  border: 2px dotted white;
+}
+
+.dark-mode {
+  background: black;
+  color: white;
 }

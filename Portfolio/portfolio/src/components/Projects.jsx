@@ -36,7 +36,7 @@ const Projects = () => {
             <Button colorScheme="facebook">
               <Link
                 to={
-                  "https://github.com/masai-course/saurav_kashyap_cap06_007/tree/master/Walmart"
+                  "https://github.com/skashyap9934/full_stack_projects/tree/main/Portfolio/portfolio"
                 }
                 target="_blank"
               >
@@ -45,7 +45,10 @@ const Projects = () => {
             </Button>
 
             <Button colorScheme="green">
-              <Link to={`https://666d569e7b5d7fa16f25ee78--clever-biscuit-7213f5.netlify.app/`} target="_blank">
+              <Link
+                to={`https://666d569e7b5d7fa16f25ee78--clever-biscuit-7213f5.netlify.app/`}
+                target="_blank"
+              >
                 Deployed App
               </Link>
             </Button>

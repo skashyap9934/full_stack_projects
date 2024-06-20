@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
+
 // Packages
-import React from "react";
+import React, { useContext } from "react";
 
 // Stylesheets
 import "./App.css";
@@ -15,10 +17,13 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import ThanksNote from "./components/ThanksNote";
+import { MyThemeContext } from "./context/ThemeContextProvider";
 
 const App = () => {
+  const { theme } = useContext(MyThemeContext);
+
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Navbar />
       <PostNavBody />
       <About />

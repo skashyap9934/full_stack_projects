@@ -34,12 +34,15 @@ const Experience = () => {
         </p>
 
         <ul className="JobDesc">
-          <li>Worked as Windows Administrator</li>
-
-          <li>Created Active Directories</li>
-
+          <li>Worked as Frontend Developer</li>
+          <li>Created Full Stack Projects</li>
           <li>
-            Allowed & declined various polices on Control Panel for security
+            Developed and maintained server-side APIs for various CRUD
+            operations using backend technologies
+          </li>
+          <li>
+            Built the frontend UI using React, Redux and other required
+            libraries and frameworks
           </li>
         </ul>
 

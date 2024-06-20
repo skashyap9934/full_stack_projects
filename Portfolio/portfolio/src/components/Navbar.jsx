@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
+
 // Packgaes
-import React from "react";
+import React, { useContext } from "react";
 
 // Components
 import { Flex, Heading, Image } from "@chakra-ui/react";
@@ -8,8 +10,11 @@ import { Link } from "react-scroll";
 // Assets
 import ProfilePic from "../assets/MyPic.jpg";
 import Resume from "../assets/SauravKashyap_FSD.pdf";
+import { MyThemeContext } from "../context/ThemeContextProvider";
 
 const Navbar = () => {
+  const { theme, setTheme } = useContext(MyThemeContext);
+
   return (
     <Flex className="Navbar">
       <Flex>
@@ -60,6 +65,15 @@ const Navbar = () => {
           Resume
         </a>
       </Flex>
+
+      <i
+        className={`fa-solid fa-moon`}
+        onClick={() =>
+          theme === "white-mode"
+            ? setTheme("dark-mode")
+            : setTheme("white-mode")
+        }
+      ></i>
     </Flex>
   );
 };
