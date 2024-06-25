@@ -6,8 +6,8 @@ import { Button, Image } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
 // Assets
-import ProfilePic from "../assets/MyPic.jpg";
-import Resume from "../assets/SauravKashyap_FSD.pdf";
+import ProfilePic from "../assets/passport_size_pic.png";
+import Resume from "../assets/Saurav_Kashyap_Resume.pdf.pdf";
 
 const PostNavBody = () => {
   // Hooks for changing the state of the flag
