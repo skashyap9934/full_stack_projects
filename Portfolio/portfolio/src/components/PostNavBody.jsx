@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 
 // Assets
 import ProfilePic from "../assets/passport_size_pic.png";
-import Resume from "../assets/Saurav_Kashyap_Resume.pdf.pdf";
+import Resume from "../assets/Saurav_Kashyap_Resume.pdf";
 
 const PostNavBody = () => {
   // Hooks for changing the state of the flag

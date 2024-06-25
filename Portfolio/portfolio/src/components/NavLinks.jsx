@@ -3,7 +3,7 @@ import { Flex } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
 // Assets
-import Resume from "../assets/SauravKashyap_FSD.pdf";
+import Resume from "../assets/Saurav_Kashyap_Resume.pdf";
 
 const NavLinks = () => {
   return (
