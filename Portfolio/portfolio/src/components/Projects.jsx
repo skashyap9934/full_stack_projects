@@ -35,9 +35,7 @@ const Projects = () => {
           <div className="Buttons">
             <Button colorScheme="facebook">
               <Link
-                to={
-                  "https://github.com/skashyap9934/full_stack_projects/tree/main/Portfolio/portfolio"
-                }
+                to={"https://github.com/skashyap9934/walmart"}
                 target="_blank"
               >
                 Git Repo
@@ -45,10 +43,7 @@ const Projects = () => {
             </Button>
 
             <Button colorScheme="green">
-              <Link
-                to={`https://666d569e7b5d7fa16f25ee78--clever-biscuit-7213f5.netlify.app/`}
-                target="_blank"
-              >
+              <Link to={`https://walmart-kashyap.netlify.app/`} target="_blank">
                 Deployed App
               </Link>
             </Button>
@@ -77,9 +72,7 @@ const Projects = () => {
           <div className="Buttons">
             <Button colorScheme="facebook">
               <Link
-                to={
-                  "https://github.com/masai-course/saurav_kashyap_cap06_007/tree/master/YouTube%20Clone/youtube-clone"
-                }
+                to={"https://github.com/skashyap9934/youtube"}
                 target="_blank"
               >
                 Git Repo
@@ -87,10 +80,7 @@ const Projects = () => {
             </Button>
 
             <Button colorScheme="green">
-              <Link
-                to={`https://youtube-clone-kashyap.netlify.app/`}
-                target="_blank"
-              >
+              <Link to={`https://youtube-kashyap.netlify.app/`} target="_blank">
                 Deployed App
               </Link>
             </Button>

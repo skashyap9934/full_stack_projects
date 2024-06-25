@@ -13,9 +13,12 @@
   z-index: 1;
 }
 
+.NavMenu {
+  display: none;
+}
+
 .Navbar h3 {
   font-family: "Poppins";
-  font-size: 1.75rem;
 }
 
 .Navbar a {
@@ -54,7 +57,7 @@
   font-family: "Poppins";
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 30%;
   transform: translate(-50%, -50%);
   font-weight: 600;
   padding: 1rem;
@@ -324,10 +327,10 @@
 }
 
 .Experience div {
-  width: max-content;
+  width: 70%;
   padding: 2%;
   box-shadow: 0px 0px 0px 1px rgba(109, 255, 138, 0.51);
-  margin-left: 5%;
+  margin-left: 5rem;
   position: relative;
   border-radius: 3px 31px 3px 31px;
 }
@@ -427,4 +430,76 @@
 .dark-mode {
   background: black;
   color: white;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .Details {
+    left: 35%;
+    font-size: 1rem;
+  }
+
+  .Navbar a {
+    font-size: 1rem;
+  }
+
+  .Projects > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .Grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Details {
+    left: 31%;
+    font-size: 1rem;
+  }
+
+  .Projects > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .About > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .About > div > div:last-child {
+    width: 75%;
+  }
+
+  #stats > div {
+    width: 30%;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .SkillSec {
+    padding: 1.5rem;
+  }
+
+  .Name span {
+    font-size: 1.25rem;
+  }
+
+  .NavMenu {
+    display: block;
+  }
+
+  .Grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.NavMenu {
+  color: black;
+}
+
+.NavMenu a:hover {
+  color: red;
+  text-decoration: none;
 }

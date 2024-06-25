@@ -1,5 +1,5 @@
 // Packages
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Components
 import { Button, Image } from "@chakra-ui/react";
@@ -13,9 +13,11 @@ const PostNavBody = () => {
   // Hooks for changing the state of the flag
   let [flag, setFlag] = useState(true);
 
-  setInterval(() => {
-    setFlag(!flag);
-  }, 3000);
+  useEffect(() => {
+    setInterval(() => {
+      setFlag(!flag);
+    }, 3000);
+  }, [flag]);
 
   return (
     <div className="PostNavBody" id="postnav">
