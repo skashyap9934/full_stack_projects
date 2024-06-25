@@ -24,7 +24,6 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <p>Hi</p>
       <Navbar />
       <PostNavBody />
       <About />

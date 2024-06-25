@@ -34,16 +34,11 @@ const Experience = () => {
         </p>
 
         <ul className="JobDesc">
-          <li>Worked as Frontend Developer</li>
-          <li>Created Full Stack Projects</li>
-          <li>
-            Developed and maintained server-side APIs for various CRUD
-            operations using backend technologies
-          </li>
-          <li>
-            Built the frontend UI using React, Redux and other required
-            libraries and frameworks
-          </li>
+          <li>Worked as Windows Administrator</li>
+          <li>Created Active Directory</li>
+          <li>Allowing and denying the access to the user</li>
+          <li>Authenticating the user</li>
+          <li>Authorizing the user</li>
         </ul>
 
         <Image className="CompanyLogo" src={CapgeminiLogo} alt="Logo" />

@@ -1,4 +1,5 @@
 // Components
+import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
@@ -22,11 +23,11 @@ const NavLinks = () => {
           Home
         </Link>
 
-        <Link to="about" spy={true} smooth={true} offset={-150} duration={500}>
+        <Link to="about" spy={true} smooth={true} offset={-40} duration={500}>
           About
         </Link>
 
-        <Link to="skills" spy={true} smooth={true} offset={-60} duration={500}>
+        <Link to="skills" spy={true} smooth={true} offset={-50} duration={500}>
           Skills
         </Link>
 
@@ -34,7 +35,7 @@ const NavLinks = () => {
           to="projects"
           spy={true}
           smooth={true}
-          offset={-150}
+          offset={-50}
           duration={500}
         >
           Projects

@@ -2,10 +2,10 @@
 import React from "react";
 
 // Components
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 
 // Assets
-import PassportPic from "../assets/passport_size_pic.png";
+import PassportPic from "../assets/Saurav_Kashyap_Passpost_Size Photo.png";
 
 const About = () => {
   return (
@@ -16,21 +16,19 @@ const About = () => {
         <Image src={PassportPic} alt="Image" />
 
         <Box>
-          <p className="Mern">
+          {/* <p className="Mern">
             My name is Saurav Kashyap and{" "}
             <span>I'm a MERN Stack Developer</span>
-          </p>
+          </p> */}
 
-          <br />
-
-          <p>
-            An <strong>experienced</strong>, hard-working, and Stack Developer
-            with proficiency in MongoDB, Express. ambitious Full js, React.js,
-            Node.js, Redux, RESTful APIs, and Git. Having a problem solving
-            mindset, and 1200+ hours of hands on experience on developing fully
-            functional Full Stack website. Looking forward to working as a
-            developer and competent employee in an exciting tech company.
-          </p>
+          <Text fontSize={20}>
+            An <strong>experienced</strong>, hard-working Full Stack Developer
+            with proficiency in MongoDB, Express.js, React.js, Node.js, Redux,
+            RESTful APIs, and Git. Having a problem solving mindset, and 1200+
+            hours of hands on experience on developing fully functional Full
+            Stack website. Looking forward to working as a developer and
+            competent employee in an exciting tech company.
+          </Text>
         </Box>
       </Box>
     </div>

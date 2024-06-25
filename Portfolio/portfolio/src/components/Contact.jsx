@@ -17,7 +17,7 @@ const Contact = () => {
 
         <li>
           <i className="fa-solid fa-envelope"></i>
-          <Link to="mailto:example@example.com">Mail Me</Link>
+          <Link to="mailto:kashyapsaurav531@gmail.com">Mail Me</Link>
         </li>
 
         <li>
@@ -39,7 +39,7 @@ const Contact = () => {
         <li>
           <i className="fa-brands fa-github"></i>
           <Link
-            to="https://github.com/kashyapsaurav/kashyapsaurav"
+            to="https://github.com/skashyap9934/skashyap9934"
             target="_blank"
           >
             Github
