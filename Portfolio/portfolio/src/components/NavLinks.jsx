@@ -4,7 +4,7 @@ import { Flex } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
 // Assets
-import Resume from "../assets/Saurav_Kashyap_Resume.pdf";
+import Resume from "../assets/ResumeKashyap.pdf";
 
 const NavLinks = () => {
   return (
