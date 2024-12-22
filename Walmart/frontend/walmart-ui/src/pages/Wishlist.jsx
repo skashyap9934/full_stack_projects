@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { Box, Image, Table, Tbody, Text } from "@chakra-ui/react";
 import BagContainer from "../components/Bag/BagContainer";
 import Navbar from "../components/CommonComponents/Navbar";

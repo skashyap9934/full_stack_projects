@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { Box, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -52,7 +54,7 @@ const TopNav = () => {
       <Link to={"/bag"} className="FlexLink CartLink">
         <b className="bi bi-cart2">
           <Text>{bag.totalCount}</Text>
-          <b className="bi bi-currency-dollar">{bag.totalCost}</b>
+          <b className="bi bi-currency-dollar">{Math.floor(bag.totalCost)}</b>
         </b>
       </Link>
     </Box>

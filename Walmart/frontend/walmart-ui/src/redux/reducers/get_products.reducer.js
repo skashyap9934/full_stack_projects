@@ -9,6 +9,8 @@ const initState = {
   data: [],
   error: null,
   currentPage: 1,
+  order: "default",
+  category: "default",
 };
 
 const getProductsReducer = (state = initState, { type, payload }) => {

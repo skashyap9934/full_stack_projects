@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { Button, Text } from "@chakra-ui/react";
 
 const MailTo = () => {

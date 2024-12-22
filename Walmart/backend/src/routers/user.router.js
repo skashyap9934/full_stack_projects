@@ -13,7 +13,6 @@ userRouter.post("/register", async (req, res) => {
 
   try {
     const user = await UserModel.findOne({ email });
-
     if (user)
       return res.json({
         message: "You are already registered.",
@@ -28,7 +27,6 @@ userRouter.post("/register", async (req, res) => {
 
     bcrypt.hash(password, 5, async (err, hashedPassword) => {
       if (err) return res.send("Something went wrong");
-
       const newUser = new UserModel({ email, password: hashedPassword });
       await newUser.save();
       return res
@@ -45,12 +43,10 @@ userRouter.post("/login", async (req, res) => {
 
   try {
     const user = await UserModel.findOne({ email });
-
     if (!password || !email)
       return res.json({ message: "Invalid Credentials. Please try again." });
 
     if (!user) return res.json({ message: "Please register first." });
-
     bcrypt.compare(password, user.password, async (err, result) => {
       if (result) {
         const access_token = jwt.sign(
@@ -80,7 +76,6 @@ userRouter.post("/address", async (req, res) => {
     await newAddress.save();
     return res.json({ message: "Address Added.", status: true });
   }
-
   return res.json({ message: "Invalid Data.", status: false });
 });
 
@@ -92,8 +87,7 @@ userRouter.post("/payment", async (req, res) => {
     await newPayment.save();
     return res.json({ status: "Success", message: "Payment Done" });
   }
-
   return res.json({ status: "Fail", message: "Payment Failed" });
 });
 
-module.exports = userRouter;
+module.exports = { userRouter };

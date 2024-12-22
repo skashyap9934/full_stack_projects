@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { ListItem, Text, UnorderedList } from "@chakra-ui/react";
 
 const Footer = () => {

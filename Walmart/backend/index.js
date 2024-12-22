@@ -1,11 +1,14 @@
+// Packages and Modules
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const connectToDatabase = require("./src/config/database");
-const userRouter = require("./src/routers/user.router");
-const productsRouter = require("./src/routers/products.router");
+
+// Required Files
+const { connectToDatabase } = require("./src/config/database");
+const { userRouter } = require("./src/routers/user.router");
+const { productsRouter } = require("./src/routers/products.router");
 const { wishlistsRouter } = require("./src/routers/wishlist.router");
-const bagsRouter = require("./src/routers/bags.router");
-require("dotenv").config();
+const { bagsRouter } = require("./src/routers/bags.router");
 
 const PORT = process.env.PORT || 8080;
 

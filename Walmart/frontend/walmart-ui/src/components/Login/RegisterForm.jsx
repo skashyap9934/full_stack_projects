@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import {
   Box,
   Button,
@@ -12,10 +14,8 @@ import { registerUser } from "../../redux/actions/register.user";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
-
   const loginDetails = useSelector((store) => store.login);
   const newUser = useSelector((store) => store.newUser);
-
   const [info, setInfo] = useState(false);
 
   const [credentials, setCredentials] = useState({

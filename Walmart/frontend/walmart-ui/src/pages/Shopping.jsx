@@ -1,12 +1,28 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import React from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 import Navbar from "../components/CommonComponents/Navbar";
 import { Link } from "react-router-dom";
 import ShopBodyLeft from "../components/ShoppingPage/ShopBodyLeft";
 import ShoppingBodyRight from "../components/ShoppingPage/ShoppingBodyRight";
 import Footer from "../components/CommonComponents/Footer";
 import Pagination from "../components/ShoppingPage/Pagination";
+import { getProducts } from "../redux/actions/get_products";
 
 const Shopping = () => {
+  const [category, setCategory] = React.useState("default");
+  const [order, setOrder] = React.useState("default");
+  const updateCategory = (category) => setCategory(category);
+  const updateOrder = (order) => setOrder(order);
+  const dispatch = useDispatch();
+  const products = useSelector((store) => store.getProducts);
+
+  useEffect(() => {
+    dispatch(getProducts(1, category, order));
+  }, [category, order]);
+
   return (
     <div className="Shopping">
       <Navbar />
@@ -25,12 +41,16 @@ const Shopping = () => {
       </Flex>
 
       <Box className="ProdContainer">
-        <ShopBodyLeft />
-        <ShoppingBodyRight />
+        <ShopBodyLeft
+          category={category}
+          updateCategory={updateCategory}
+          order={order}
+          updateOrder={updateOrder}
+        />
+        <ShoppingBodyRight products={products} />
       </Box>
 
-      <Pagination />
-
+      <Pagination updateOrder={updateOrder} updateCategory={updateCategory} />
       <Footer />
     </div>
   );

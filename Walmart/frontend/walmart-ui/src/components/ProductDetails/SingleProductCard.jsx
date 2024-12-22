@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
+import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
 import { Badge, Box, Image, Text, Heading } from "@chakra-ui/react";
 

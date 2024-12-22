@@ -69,4 +69,4 @@ bagsRouter.delete("/delete/item/:id", async (req, res) => {
   return res.json({ message: `Invalid Item ID` });
 });
 
-module.exports = bagsRouter;
+module.exports = { bagsRouter };

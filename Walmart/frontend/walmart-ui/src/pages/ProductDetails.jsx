@@ -1,4 +1,6 @@
-import { Link, useParams } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import React from "react";
+import {  useParams } from "react-router-dom";
 import SingleProductCard from "../components/ProductDetails/SingleProductCard";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

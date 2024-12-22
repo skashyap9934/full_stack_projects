@@ -46,6 +46,15 @@ const TechStack = () => {
 
         <GridItem>
           <Image
+            className="NoRadius"
+            src="https://cdn.worldvectorlogo.com/logos/next.svg"
+            alt="Image"
+          />
+          <p>Next.js</p>
+        </GridItem>
+
+        <GridItem>
+          <Image
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU3g787KO0fRWi-xyLY4MKo1SOqFV8QGK_zW7rhZ_e77FmG9Eh0rP4eMjrAC3smltMSEQ&usqp=CAU"
             alt="Image"
           />

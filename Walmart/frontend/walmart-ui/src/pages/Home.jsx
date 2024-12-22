@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import HomeBelowBody from "../components/HomePage/HomeBelowBody";
 import HomePageBody from "../components/HomePage/HomePageBody";
 import Navbar from "../components/CommonComponents/Navbar";

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 

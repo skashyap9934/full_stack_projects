@@ -14,9 +14,11 @@ const PostNavBody = () => {
   let [flag, setFlag] = useState(true);
 
   useEffect(() => {
-    setInterval(() => {
+    let intervalId = setInterval(() => {
       setFlag(!flag);
     }, 3000);
+
+    return () => clearInterval(intervalId);
   }, [flag]);
 
   return (

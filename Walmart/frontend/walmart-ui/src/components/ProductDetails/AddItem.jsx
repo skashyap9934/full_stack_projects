@@ -1,12 +1,12 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-
+import React from "react";
 import { Button, useToast } from "@chakra-ui/react";
 import { validateItem } from "../../redux/actions/validate_item";
 import { useSelector } from "react-redux";
 
 const AddItem = ({ item }) => {
   const toast = useToast();
-
   const loginDetails = useSelector((store) => store.login);
 
   return (

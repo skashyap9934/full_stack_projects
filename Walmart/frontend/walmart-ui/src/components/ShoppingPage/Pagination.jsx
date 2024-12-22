@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-key */
-
+import React from "react";
 import { Button } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/get_products";
 
-const Pagination = () => {
+const Pagination = ({ updateOrder, updateCategory }) => {
   const dispatch = useDispatch();
   const products = useSelector((store) => store.getProducts);
 
@@ -15,7 +17,11 @@ const Pagination = () => {
           isDisabled={products.currentPage == index + 1 ? true : false}
           colorScheme={"pink"}
           key={index}
-          onClick={() => dispatch(getProducts(index + 1))}
+          onClick={() => {
+            dispatch(getProducts(index + 1, "default", "default"));
+            updateCategory("default");
+            updateOrder("default");
+          }}
         >
           {index + 1}
         </Button>

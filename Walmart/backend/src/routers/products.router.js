@@ -1,41 +1,42 @@
 const { Router } = require("express");
 const mongoose = require("mongoose");
-const url = require("url");
 
 require("dotenv").config();
 
 const productsRouter = Router();
 
 productsRouter.get("/", async (req, res) => {
-  const parsedURL = url.parse(req.url, true);
-  const query = parsedURL.query;
-
-  const { page, limit, order, category } = query;
-
-  const categoryQuery = category
-    ? { $exists: true, $eq: category }
-    : { $exists: true, $ne: category };
+  const { page, limit, order, category } = req.query;
+  const categoryQuery =
+    category !== "default" ? { $eq: category } : { $ne: category };
 
   const collection = mongoose.connection.collection("products");
   const products = await collection
     .find({ category: categoryQuery })
-    .skip(Number(page - 1) * Number(limit ?? 20))
-    .limit(Number(limit ?? 20))
+    .skip(Number(page - 1) * Number(limit ?? 6))
+    .limit(Number(limit ?? 6))
     .toArray();
 
   let sortedData = products;
-  if (order) {
-    if (order === "desc")
+  switch (order) {
+    case "desc":
       sortedData = products.sort((a, b) => a.rating - b.rating);
-    else sortedData = products.sort((a, b) => b.rating - a.rating);
+      break;
+    case "asc":
+      sortedData = products.sort((a, b) => b.rating - a.rating);
+      break;
+    default:
+      sortedData = products;
+      break;
   }
 
   const totalCount = await collection.countDocuments();
-
   return res.status(200).json({
     products: sortedData,
+    category,
+    order,
     totalCount,
-    limit: Number(limit) || 20,
+    limit: Number(limit) || 6,
     page: Number(page) || 1,
   });
 });
@@ -49,4 +50,4 @@ productsRouter.get("/:id", async (req, res) => {
   res.status(200).json({ product: product });
 });
 
-module.exports = productsRouter;
+module.exports = { productsRouter };

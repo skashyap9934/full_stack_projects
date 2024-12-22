@@ -1,21 +1,20 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import {
   Button,
   Center,
   FormControl,
   FormLabel,
   Input,
-  Link,
   Text,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../redux/actions/login";
 
 const LoginForm = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-
   const [info, setInfo] = useState(false);
-
   const dispatch = useDispatch();
   const login = useSelector((store) => store.login);
 
